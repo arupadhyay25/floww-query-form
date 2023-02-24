@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Website</title>
+    <!-- Include Axios from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to my website!</h1>
+    <p>Click the button to make a request to the server:</p>
+    <button onclick="makeRequest()">Make Request</button>
+
+    <script>
+      async function makeRequest() {
+        let headersList = {
+          Accept: "*/*",
+        };
+
+        let reqOptions = {
+          url: "https://backend.gofloww.co/api/v1/integration/get-auth/",
+          method: "POST",
+          headers: headersList,
+        };
+
+        let response = await axios.request(reqOptions);
+        console.log(JSON.parse(response.data));
+      }
+    </script>
+  </body>
+</html>
+<!-- http://localhost:5500/axiostest.html -->

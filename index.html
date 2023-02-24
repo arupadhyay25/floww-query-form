@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="axios.min.js"></script>
+  </head>
+  <link rel="stylesheet" href="index.css".css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <div class="floww-main-wrapper">
+      <div class="floww-form-wrapper">
+        <h1 class="floww-form-heading">
+          Query Form
+          <span>Example Tagline Text</span>
+        </h1>
+        <br />
+        <div class="devicer"></div>
+        <br />
+        <br />
+        <form id="floww-form">
+          <!-- Name -->
+          <div class="floww-mb-5">
+            <label for="name" class="floww-form-label">
+              Full Name <span class="floww-required-field">*</span></label
+            >
+            <input
+              type="text"
+              name="name"
+              id="floww-name"
+              placeholder="Full Name"
+              class="floww-form-input"
+              required
+            />
+          </div>
+          <!-- Phone -->
+          <div class="floww-mb-5">
+            <label for="phone" class="floww-form-label">
+              Phone Number <span class="floww-required-field">*</span></label
+            >
+            <input
+              type="text"
+              name="phone"
+              id="floww-phone"
+              placeholder="Enter your phone number"
+              class="floww-form-input"
+              required
+            />
+          </div>
+          <!-- Email -->
+          <div class="floww-mb-5">
+            <label for="email" class="floww-form-label">
+              Email Address <span class="floww-required-field">*</span>
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="floww-email"
+              placeholder="Enter your email"
+              class="floww-form-input"
+              required
+            />
+          </div>
+          <!-- Company Name -->
+          <div class="floww-mb-5">
+            <label for="Companyname" class="floww-form-label">
+              Company Name <span class="floww-required-field">*</span>
+            </label>
+            <input
+              type="text"
+              name="Company_name"
+              id="floww-Company-name"
+              placeholder="Enter your Company Name"
+              class="floww-form-input"
+              required
+            />
+          </div>
+          <!-- website -->
+          <div class="floww-mb-5">
+            <label for="CompanyWebsite" class="floww-form-label">
+              Website (optional)
+            </label>
+            <input
+              type="url"
+              name="Companywebsite"
+              id="Company_website"
+              placeholder="Enter your Company Website"
+              class="floww-form-input"
+            />
+          </div>
+          <!-- Business Type and Monthly order -->
+          <div class="flex flex-wrap floww--mx-3">
+            <!-- Business Type -->
+            <div class="w-full sm:w-half floww-px-3">
+              <div class="floww-mb-5 w-full">
+                <label for="BusinessType" class="floww-form-label">
+                  Business Type <span class="floww-required-field">*</span>
+                </label>
+                <select
+                  class="floww-form-input"
+                  id="floww-business-type"
+                  name="flow_business_type"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Select Business Type
+                  </option>
+                  <option value="registered">Registered</option>
+                  <option value="individual">Individual</option>
+                </select>
+              </div>
+            </div>
+            <!-- Monthly Order Volume -->
+            <div class="w-full sm:w-half floww-px-3">
+              <div class="floww-mb-5">
+                <label for="time" class="floww-form-label">
+                  Monthly Order Volume
+                  <span class="floww-required-field">*</span>
+                </label>
+                <select
+                  class="floww-form-input"
+                  id="floww-Monthly-Order-Volume"
+                  name="Monthly_Order_Volume"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Monthly Order Volume
+                  </option>
+                  <option value="0-10">0-10</option>
+                  <option value="10-100">10-100</option>
+                  <option value="100-1000">100-1000</option>
+                  <option value="1000+">above 1000</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Website Hoisting -->
+          <div class="floww-mb-5">
+            <label for="Companyname" class="floww-form-label">
+              Website Hoisting <span class="floww-required-field">*</span>
+            </label>
+            <select
+              class="floww-form-input"
+              id="floww-Website-Hoisting"
+              name="Website_Hoisting"
+              required
+            >
+              <option value="" disabled selected>
+                Select Website Hoisting
+              </option>
+              <option value="Self-Hoisted">Self-Hoisted</option>
+              <option value="Floww-Brand Builder">Floww-Brand Builder</option>
+              <option value="OpenCart">OpenCart</option>
+              <option value="Woo-Commerce">Woo-Commerce</option>
+              <option value="Shopify">Shopify</option>
+              <option value="Instagram">Instagram</option>
+              <option value="others">others</option>
+            </select>
+          </div>
+          <!-- form submmit button -->
+          <div>
+            <button class="floww-btn">Book Appointment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="Queryform.js"></script>
