@@ -18,24 +18,13 @@ function formsubmit(e) {
     console.error("Form not found.");
   }
 }
-async function makeRequest(object) {
-  let headersList = {
-    Accept: "*/*",
-    "Content-Type": "application/json",
-  };
-
-  let bodyContent = JSON.stringify(object);
-
-  let reqOptions = {
-    url: "https://backend.gofloww.co/api/v1/integration/get-auth/",
-    method: "POST",
-    headers: headersList,
-    data: bodyContent,
-  };
-
-  let response = await axios.request(reqOptions);
-  console.log(response);
-  formdiv.innerHTML = `
+function makeRequest(payload) {
+  axios
+    .post("https://backend.gofloww.co/api/v1/integration/get-auth/", payload)
+    .then(function (response) {
+      let responseData = JSON.parse(response.data);
+      console.log(responseData);
+      formdiv.innerHTML = `
       <div id="floww-success-div">
         <img id="floww-success-image" src="./Icons/success_celebration3.gif" width="100%"/>
         <br/>
@@ -43,6 +32,10 @@ async function makeRequest(object) {
           Thank you !! We Will get back to it as soon as possible
         </h4>
       </div>`;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 }
 /*
 let object = {
